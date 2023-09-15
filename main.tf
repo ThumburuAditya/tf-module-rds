@@ -38,7 +38,7 @@ resource "aws_rds_cluster" "main" {
   cluster_identifier      = "${var.name}-${var.env}-rds"
   engine                  = "aurora-mysql"
   engine_version          = var.engine_version
-  availability_zones      = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  availability_zones      = ["us-east-2a", "us-east-2b", "us-east-2c"]
   database_name           = "dummy"
   master_username         = data.aws_ssm_parameter.db_user.value
   master_password         = data.aws_ssm_parameter.db_pass.value
